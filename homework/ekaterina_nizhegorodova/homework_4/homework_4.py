@@ -7,7 +7,7 @@ my_dict = {"tuple": ("tuple1", "tuple2", "tuple3", "tuple4",
 print(my_dict["tuple"][-1])
 my_dict["list"].append("list7")  # new item added to the end of the list
 my_dict["list"].pop(1)  # delete "list2"
-my_dict["dict"]["i am a tuple"] = "value7"  # add new item to the dict
+my_dict["dict"][("i am a tuple",)] = "value7"  # add new item to the dict
 my_dict["dict"].pop("key1")  # delete "key1": "value1"
 my_dict["set"].add(7)  # add new element to set
 my_dict["set"].discard(2)  # delete element 2 from set
