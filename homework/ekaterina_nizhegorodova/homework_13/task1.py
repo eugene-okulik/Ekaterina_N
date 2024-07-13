@@ -20,4 +20,3 @@ with open(file_path, encoding="utf-8") as file:
             date_now = datetime.datetime.now()
             differ = date_now - date
             print(differ.days)
-
