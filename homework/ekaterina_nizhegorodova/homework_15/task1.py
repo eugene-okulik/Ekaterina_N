@@ -22,7 +22,7 @@ cursor.executemany(
         ('Diva Plavalaguna songs lyrics', student_id),
         ('Multipass validation tutorial', student_id),
         ('How to fix flying taxi vehicle', student_id)
-        ]
+    ]
 )
 
 # Create group
@@ -49,7 +49,7 @@ cursor.executemany(
         ('Catch up passengers in the air', subject_ids[1]),
         ('Fight like a Bruce Willis', subject_ids[2]),
         ('Aikido', subject_ids[2])
-        ]
+    ]
 )
 lesson_ids = [cursor.lastrowid, cursor.lastrowid, cursor.lastrowid,
               cursor.lastrowid, cursor.lastrowid, cursor.lastrowid]
