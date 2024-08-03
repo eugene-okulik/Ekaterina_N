@@ -37,4 +37,4 @@ for doc in file_path:
                 result = " ".join(result_list)
                 print(f" Line # {line_num}: {result}")
         if not founded:
-            print("No matches has been found")
+            print("No matches have been found")
