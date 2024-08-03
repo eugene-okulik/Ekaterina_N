@@ -35,6 +35,11 @@ for doc in file_path:
                 after = min(key_index + 6, len(words))
                 result_list = words[before:key_index] + [args.keywords] + words[key_index + 1:after]
                 result = " ".join(result_list)
-                print(f" Line # {line_num}: {result}")
+                """checking if --all argument has been provided"""
+                if args.all:
+                    print(f" Line # {line_num}: {result}")
+                else:
+                    print(f" Line # {line_num}: {result}")
+                    break
         if not founded:
             print("No matches have been found")
