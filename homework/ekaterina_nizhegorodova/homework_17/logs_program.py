@@ -35,11 +35,12 @@ for doc in file_path:
                 after = min(key_index + 6, len(words))
                 result_list = words[before:key_index] + [args.keywords] + words[key_index + 1:after]
                 result = " ".join(result_list)
+                file_name = os.path.basename(doc)  # extract file name from the absolute path
                 """checking if --all argument has been provided"""
                 if args.all:
-                    print(f" Line # {line_num}: {result}")
+                    print(f"File name:{file_name}:\nLine # {line_num}: {result}")
                 else:
-                    print(f" Line # {line_num}: {result}")
+                    print(f"File name:{file_name}:\nLine # {line_num}: {result}")
                     break
         if not founded:
             print("No matches have been found")
