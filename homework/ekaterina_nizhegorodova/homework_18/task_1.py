@@ -1,5 +1,4 @@
 import requests
-import json
 
 
 def new_item():
@@ -61,7 +60,7 @@ def get_items_by_ids():
     item_id2 = new_item()
     item_id3 = new_item()
     response = requests.get(
-        f"https://api.restful-api.dev/objects",
+        "https://api.restful-api.dev/objects",
         params={"id": [item_id1, item_id2, item_id3]}
     )
     assert response.status_code == 200, "Status code is incorrect"
