@@ -158,5 +158,5 @@ def test_patch_item(before_after, new_item_data):
 def test_delete_item(before_after, new_item_data):
     response = requests.delete(f"https://api.restful-api.dev/objects/{new_item_data['id']}")
     assert response.status_code == 200, "Status code is incorrect"
-    assert response.json()["message"] == f"Object with id = {new_item_data["id"]} has been deleted.", \
+    assert response.json()["message"] == f"Object with id = {new_item_data['id']} has been deleted.", \
         "Incorrect message"
