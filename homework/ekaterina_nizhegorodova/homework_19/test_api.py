@@ -90,7 +90,7 @@ def test_post_item(start_complete, before_after, body):
 
 @pytest.mark.medium
 def test_get_single_item(before_after, new_item_data):
-    response = requests.get(f"https://api.restful-api.dev/objects/{new_item_data["id"]}")
+    response = requests.get(f"https://api.restful-api.dev/objects/{new_item_data['id']}")
     assert response.status_code == 200, "Status code is incorrect"
     assert response.json()["name"] == new_item_data["name"], "Name is incorrect"
     assert response.json()["data"]["year"] == new_item_data["data"]["year"], "Year is incorrect"
@@ -131,7 +131,7 @@ def test_update_item(before_after, new_item_data):
             "Hard disk size": "256 GB"
         }
     }
-    response = requests.put(f"https://api.restful-api.dev/objects/{new_item_data["id"]}", json=new_data)
+    response = requests.put(f"https://api.restful-api.dev/objects/{new_item_data['id']}", json=new_data)
     assert response.status_code == 200, "Status code is incorrect"
     assert response.json()["name"] == new_data["name"], "Name is incorrect"
     assert response.json()["data"]["year"] == new_data["data"]["year"], "Year is incorrect"
@@ -149,14 +149,14 @@ def test_patch_item(before_after, new_item_data):
             "price": 867.70,
         }
     }
-    response = requests.patch(f"https://api.restful-api.dev/objects/{new_item_data["id"]}", json=data)
+    response = requests.patch(f"https://api.restful-api.dev/objects/{new_item_data['id']}", json=data)
     assert response.status_code == 200, "Status code is incorrect"
     assert response.json()["data"]["year"] == data["data"]["year"], "Year is incorrect"
     assert response.json()["data"]["price"] == data["data"]["price"], "Price is incorrect"
 
 
 def test_delete_item(before_after, new_item_data):
-    response = requests.delete(f"https://api.restful-api.dev/objects/{new_item_data["id"]}")
+    response = requests.delete(f"https://api.restful-api.dev/objects/{new_item_data['id']}")
     assert response.status_code == 200, "Status code is incorrect"
     assert response.json()["message"] == f"Object with id = {new_item_data["id"]} has been deleted.", \
         "Incorrect message"
