@@ -38,33 +38,32 @@ def new_item_data():
 @pytest.mark.critical
 @pytest.mark.parametrize("body", [
     {
-            "name": "Apple MacBook Pro 16",
-            "data": {
-                "year": 2019,
-                "price": 1849.99,
-                "CPU model": "Intel Core i9",
-                "Hard disk size": "1 TB"
-            }
-        },
-    {
-            "name": "Lenovo Yoga 82YR0009US 13.3",
-            "data": {
-                "year": 2020,
-                "price": 867.70,
-                "CPU model": "AMD Ryzen 5 7530U",
-                "Hard disk size": "256 GB"
-            }
-        },
-    {
-            "name": "ASUS Vivobook 16X",
-            "data": {
-                "year": 2023,
-                "price": 2350.00,
-                "CPU model": "AMD Ryzen 7 7730U",
-                "Hard disk size": "512 GB"
-            }
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": 2019,
+            "price": 1849.99,
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB"
         }
-
+    },
+    {
+        "name": "Lenovo Yoga 82YR0009US 13.3",
+        "data": {
+            "year": 2020,
+            "price": 867.70,
+            "CPU model": "AMD Ryzen 5 7530U",
+            "Hard disk size": "256 GB"
+        }
+    },
+    {
+        "name": "ASUS Vivobook 16X",
+        "data": {
+            "year": 2023,
+            "price": 2350.00,
+            "CPU model": "AMD Ryzen 7 7730U",
+            "Hard disk size": "512 GB"
+        }
+    }
 ])
 def test_post_item(start_complete, before_after, body):
     body = {
