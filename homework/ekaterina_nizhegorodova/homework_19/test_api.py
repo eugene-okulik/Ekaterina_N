@@ -87,7 +87,8 @@ def test_post_item(start_complete, before_after, body):
         assert response.json()["data"]["year"] == body["data"]["year"], "Year is incorrect"
         assert response.json()["data"]["price"] == body["data"]["price"], "Price is incorrect"
         assert response.json()["data"]["CPU model"] == body["data"]["CPU model"], "CPU model is incorrect"
-        assert response.json()["data"]["Hard disk size"] == body["data"]["Hard disk size"], "Hard disk size is incorrect"
+        assert response.json()["data"]["Hard disk size"] == body["data"]["Hard disk size"], \
+            "Hard disk size is incorrect"
         assert response.json()["id"] is not None, "ID is incorrect"
     post_id = response.json()["id"]
     requests.delete(f"https://api.restful-api.dev/objects/{post_id}")
